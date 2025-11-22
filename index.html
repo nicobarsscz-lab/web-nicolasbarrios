@@ -7,7 +7,7 @@
   <meta name="description" content="Acompañamiento práctico en comercio internacional para ordenar la operativa, bajar costos y reducir riesgos en exportación e importación.">
 
   <!-- Seguridad básica -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; script-src 'self' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline'; connect-src 'self'; font-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self' mailto:; frame-ancestors 'none';">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; script-src 'self' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline'; connect-src 'self'; font-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self' https://formspree.io; frame-ancestors 'none';">
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -17,17 +17,17 @@
 <body class="antialiased">
 
   <!-- =============== NAV =============== -->
-  <header class="sticky top-0 z-40 w-full backdrop-blur bg-white/70">
+  <header class="sticky top-0 z-40 w-full backdrop-blur bg-slate-950/90 border-b border-slate-800">
     <div class="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <div class="h-9 w-9 rounded-2xl bg-zinc-900"></div>
+        <div class="h-9 w-9 rounded-2xl bg-gradient-to-tr from-emerald-400 to-cyan-400"></div>
         <div class="leading-tight">
-          <p class="text-sm font-semibold text-zinc-50">Lic. Nicolás Barrios Criz</p>
-          <p class="text-xs text-zinc-500">Comercio Internacional</p>
+          <p class="text-sm font-semibold text-slate-50">Lic. Nicolás Barrios Criz</p>
+          <p class="text-xs text-slate-400">Comercio Internacional</p>
         </div>
       </div>
 
-      <nav class="hidden md:flex items-center gap-3">
+      <nav class="hidden md:flex items-center gap-3 text-xs">
         <a href="#inicio" class="nav-btn">Inicio</a>
         <a href="#servicios" class="nav-btn">Servicios</a>
         <a href="#para-quien" class="nav-btn">Para quién</a>
@@ -42,7 +42,7 @@
     </div>
   </header>
 
-  <main>
+  <main class="bg-slate-950 text-slate-50">
 
     <!-- =============== HERO =============== -->
     <section id="inicio" class="py-16">
@@ -50,19 +50,19 @@
 
         <!-- Texto hero -->
         <div class="reveal">
-          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-400 mb-2">
+          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 mb-2">
             Comercio internacional · Operativa · Estrategia
           </p>
 
-          <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-zinc-50">
+          <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-50">
             Ordeno tu operativa de comercio exterior para que vendas afuera con menos fricción.
           </h1>
 
-          <p class="mt-4 font-medium text-zinc-300">
+          <p class="mt-4 font-medium text-slate-300">
             Licenciado en Negocios Internacionales e Integración Económica — Universidad Católica del Uruguay (2023).
           </p>
 
-          <p class="mt-3 text-lg text-zinc-300">
+          <p class="mt-3 text-lg text-slate-300">
             Te ayudo a estructurar y ejecutar exportaciones e importaciones
             para que tu equipo pierda menos tiempo en trámites y tenga más claridad sobre costos, riesgos y plazos.
           </p>
@@ -73,7 +73,7 @@
             <a href="#servicios" class="btn-soft">Ver servicios</a>
           </div>
 
-          <div class="mt-6 flex flex-wrap gap-6 text-sm text-zinc-400">
+          <div class="mt-6 flex flex-wrap gap-6 text-sm text-slate-400">
             <span>📍 Montevideo, Uruguay</span>
             <span>✉️ <a id="hero-email" class="underline underline-offset-4" href="#"></a></span>
             <span>🌐 ES · EN · PT</span>
@@ -88,8 +88,8 @@
           </div>
         </div>
 
-        <!-- Tarjeta hero con mapamundi animado -->
-        <div class="hero-card ring-1 ring-black/5 overflow-hidden rounded-2xl reveal">
+        <!-- Tarjeta hero con globo / mapa -->
+        <div class="hero-card ring-1 ring-emerald-500/20 overflow-hidden rounded-2xl reveal bg-slate-900">
           <div class="cover-wrap">
             <svg class="w-full h-auto hero-svg" viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa y logística — comercio internacional">
               <defs>
@@ -139,7 +139,7 @@
               </g>
 
               <!-- texto lateral -->
-              <text x="200" y="210" font-size="40" fill="#e5e7eb" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+              <text x="200" y="210" font-size="38" fill="#e5e7eb" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
                 Comercio Internacional · Logística · Export
               </text>
               <text x="200" y="260" font-size="20" fill="#9ca3af" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
@@ -164,12 +164,10 @@
                 </g>
               </g>
 
-              <!-- globo con rutas animadas -->
+              <!-- globo con rutas -->
               <g class="globe-group" transform="translate(900,180)">
-                <!-- esfera -->
                 <circle cx="260" cy="260" r="260" fill="url(#globeGrad)" />
 
-                <!-- meridianos / paralelos -->
                 <g opacity="0.25" stroke="#0f172a" stroke-width="2">
                   <ellipse cx="260" cy="260" rx="190" ry="260" fill="none"/>
                   <ellipse cx="260" cy="260" rx="130" ry="260" fill="none"/>
@@ -177,7 +175,6 @@
                   <ellipse cx="260" cy="260" rx="260" ry="120" fill="none"/>
                 </g>
 
-                <!-- masas continentales estilizadas -->
                 <path
                   d="M165 185
                      c 40 -45 120 -70 175 -50
@@ -205,40 +202,26 @@
                   fill-opacity="0.95"
                 />
 
-                <!-- rutas animadas -->
-                <g>
-                  <path class="route-line route-1" d="M130 310 C 210 240 310 230 380 200"/>
-                  <path class="route-line route-2" d="M160 350 C 230 340 310 360 360 400"/>
-                  <path class="route-line route-3" d="M220 190 C 260 150 320 135 380 150"/>
+                <!-- rutas -->
+                <g stroke="url(#routeGrad)" stroke-width="4" fill="none" stroke-linecap="round">
+                  <path d="M130 310 C 210 240 310 230 380 200" class="route-line"/>
+                  <path d="M160 350 C 230 340 310 360 360 400" class="route-line"/>
+                  <path d="M220 190 C 260 150 320 135 380 150" class="route-line"/>
                 </g>
 
-                <!-- puertos / ciudades -->
+                <!-- puntos -->
                 <g fill="#facc15">
-                  <circle class="port-dot port-1" cx="130" cy="310" r="6"/>
-                  <circle class="port-dot port-2" cx="380" cy="200" r="6"/>
-                  <circle class="port-dot port-3" cx="220" cy="190" r="6"/>
-                  <circle class="port-dot port-4" cx="360" cy="400" r="6"/>
-                </g>
-
-                <!-- barco -->
-                <g class="ship" transform="translate(150,410)">
-                  <path d="M0 20 L80 20 L70 40 L10 40 Z" fill="#020617" stroke="#0f172a" stroke-width="2"/>
-                  <path d="M20 20 L30 0 L50 0 L56 20 Z" fill="#e5e7eb" stroke="#0f172a" stroke-width="2"/>
-                  <circle cx="30" cy="30" r="3" fill="#38bdf8"/>
-                  <circle cx="50" cy="30" r="3" fill="#38bdf8"/>
-                </g>
-
-                <!-- avión -->
-                <g class="plane" transform="translate(340,130) rotate(-15)">
-                  <path d="M0 0 L40 8 L0 16 L6 10 Z" fill="#e5e7eb"/>
-                  <path d="M0 8 L-12 0 L-8 8 L-12 16 Z" fill="#e5e7eb"/>
+                  <circle cx="130" cy="310" r="6"/>
+                  <circle cx="380" cy="200" r="6"/>
+                  <circle cx="220" cy="190" r="6"/>
+                  <circle cx="360" cy="400" r="6"/>
                 </g>
               </g>
             </svg>
           </div>
 
           <div class="p-6">
-            <p class="text-sm leading-relaxed text-zinc-400">
+            <p class="text-sm leading-relaxed text-slate-400">
               Operativa de exportación end-to-end con visión comercial.
             </p>
           </div>
@@ -248,10 +231,10 @@
     </section>
 
     <!-- =============== SERVICIOS =============== -->
-    <section id="servicios" class="py-16 bg-zinc-50/60">
+    <section id="servicios" class="py-16 bg-slate-900">
       <div class="mx-auto max-w-6xl px-6">
         <h2 class="text-3xl font-extrabold tracking-tight reveal">Servicios</h2>
-        <p class="mt-2 text-sm text-zinc-400 reveal">
+        <p class="mt-2 text-sm text-slate-400 reveal">
           Trabajo con empresas y estudios que ya venden o quieren vender al exterior, pero necesitan más orden,
           menos sorpresas y mejor control sobre su operativa de comercio internacional.
         </p>
@@ -259,86 +242,66 @@
         <div class="grid md:grid-cols-3 gap-6 mt-8">
           <article class="card p-6 reveal">
             <h3 class="font-semibold text-sm">1. Diseño y orden de la operativa</h3>
-            <p class="mt-1 text-sm text-zinc-400">
+            <p class="mt-1 text-sm text-slate-400">
               Ideal si sentís que “todo se resuelve sobre la marcha” y no hay un esquema claro.
             </p>
-            <ul class="check mt-3 space-y-1 text-sm text-zinc-400">
+            <ul class="check mt-3 space-y-1 text-sm text-slate-400">
               <li>Mapa completo del flujo actual (cotización → cobranza).</li>
               <li>Definición de responsables, documentos y puntos de control.</li>
               <li>Plantillas prácticas: checklists, matrices de costos, modelos de documentación.</li>
             </ul>
-            <a href="#contacto" class="mt-4 inline-flex text-xs link text-zinc-300">
-              Quiero ordenar mi operativa →
-            </a>
           </article>
 
           <article class="card p-6 reveal">
             <h3 class="font-semibold text-sm">2. Acompañamiento operativo</h3>
-            <p class="mt-1 text-sm text-zinc-400">
+            <p class="mt-1 text-sm text-slate-400">
               Tipo “Export Manager externo” por un período definido.
             </p>
-            <ul class="check mt-3 space-y-1 text-sm text-zinc-400">
+            <ul class="check mt-3 space-y-1 text-sm text-slate-400">
               <li>Gestión diaria con despachantes, agentes de carga y clientes.</li>
               <li>Seguimiento de órdenes, bookings y documentación crítica.</li>
               <li>Apoyo en decisiones de Incoterms, condiciones comerciales y costos.</li>
             </ul>
-            <a href="#contacto" class="mt-4 inline-flex text-xs link text-zinc-300">
-              Me interesa acompañamiento operativo →
-            </a>
           </article>
 
           <article class="card p-6 reveal">
             <h3 class="font-semibold text-sm">3. Soporte a estudios de arquitectura, ingeniería y proyectos</h3>
-            <p class="mt-1 text-sm text-zinc-400">
+            <p class="mt-1 text-sm text-slate-400">
               Para estudios y empresas de proyectos que necesitan orden en compras, logística y contratos.
             </p>
-            <ul class="check mt-3 space-y-1 text-sm text-zinc-400">
+            <ul class="check mt-3 space-y-1 text-sm text-slate-400">
               <li>Diseño de circuitos entre estudio, cliente y proveedores.</li>
               <li>Documentos base para compras, contratación y seguimiento.</li>
               <li>Tableros simples para plazos, entregables y costos.</li>
             </ul>
-            <a href="#contacto" class="mt-4 inline-flex text-xs link text-zinc-300">
-              Quiero mejorar la gestión de proyectos →
-            </a>
           </article>
         </div>
 
         <div class="grid md:grid-cols-2 gap-6 mt-6">
           <article class="card p-6 reveal">
             <h3 class="font-semibold text-sm">4. Revisión puntual de una operación</h3>
-            <p class="mt-1 text-sm text-zinc-400">
+            <p class="mt-1 text-sm text-slate-400">
               Una segunda mirada antes de cerrar una operación relevante.
             </p>
-            <ul class="check mt-3 space-y-1 text-sm text-zinc-400">
+            <ul class="check mt-3 space-y-1 text-sm text-slate-400">
               <li>Análisis de cotizaciones e Incoterms (quién paga realmente qué).</li>
               <li>Revisión de documentación antes del embarque.</li>
               <li>Identificación de riesgos y posibles costos ocultos en puerto y destino.</li>
             </ul>
-            <a href="#contacto" class="mt-4 inline-flex text-xs link text-zinc-300">
-              Revisar una operación conmigo →
-            </a>
           </article>
 
           <article class="card p-6 reveal">
             <h3 class="font-semibold text-sm">5. Capacitación práctica para equipos</h3>
-            <p class="mt-1 text-sm text-zinc-400">
+            <p class="mt-1 text-sm text-slate-400">
               Sesiones para alinear a equipos administrativos y comerciales en temas clave.
             </p>
-            <ul class="check mt-3 space-y-1 text-sm text-zinc-400">
+            <ul class="check mt-3 space-y-1 text-sm text-slate-400">
               <li>Incoterms aplicados a la realidad de la empresa (no sólo teoría).</li>
               <li>Documentación clave y errores frecuentes.</li>
               <li>Buenas prácticas para coordinar con despachantes y agentes de carga.</li>
             </ul>
-            <a href="#contacto" class="mt-4 inline-flex text-xs link text-zinc-300">
-              Organizar una capacitación →
-            </a>
           </article>
         </div>
-
-        <p class="mt-6 text-xs text-zinc-500 reveal">
-          Cada servicio se adapta al tamaño de la empresa, al rol de quien me contacta (dirección, administración, compras, etc.)
-          y al nivel de experiencia previa en comercio internacional.
-        </p>
       </div>
     </section>
 
@@ -346,14 +309,14 @@
     <section id="para-quien" class="py-16">
       <div class="mx-auto max-w-6xl px-6">
         <h2 class="text-3xl font-extrabold tracking-tight reveal">¿Para quién tiene sentido trabajar conmigo?</h2>
-        <p class="mt-2 text-sm text-zinc-400 reveal">
+        <p class="mt-2 text-sm text-slate-400 reveal">
           No soy un “curso más” ni una gran consultora. Trabajo cerca de la operación, con foco en que las cosas pasen.
         </p>
 
         <div class="grid md:grid-cols-3 gap-6 mt-8">
           <div class="card p-6 reveal text-sm">
             <h3 class="font-semibold">Pymes exportadoras / potencialmente exportadoras</h3>
-            <p class="mt-2 text-zinc-400">
+            <p class="mt-2 text-slate-400">
               Empresas de bienes de consumo o industriales que ya exportan o quieren empezar,
               pero sienten que la operativa depende demasiado de una o dos personas.
             </p>
@@ -361,14 +324,15 @@
 
           <div class="card p-6 reveal text-sm">
             <h3 class="font-semibold">Estudios de arquitectura e ingeniería</h3>
-            <p class="mt-2 text-zinc-400">
-              Estudio o empresa de proyectos que necesita más claridad en compras, contratos, logística y coordinación con proveedores.
+            <p class="mt-2 text-slate-400">
+              Estudios y empresas de proyectos que necesitan más claridad en compras, contratos,
+              logística y coordinación con proveedores.
             </p>
           </div>
 
           <div class="card p-6 reveal text-sm">
             <h3 class="font-semibold">Programas, cámaras y organizaciones</h3>
-            <p class="mt-2 text-zinc-400">
+            <p class="mt-2 text-slate-400">
               Instituciones que buscan instancias prácticas para sensibilizar o capacitar empresas en comercio internacional,
               ordenamiento de procesos y gestión de riesgos.
             </p>
@@ -377,11 +341,11 @@
       </div>
     </section>
 
-    <!-- =============== CÓMO TRABAJO (MÉTODO) =============== -->
-    <section id="metodo" class="py-16 bg-zinc-50/60">
+    <!-- =============== CÓMO TRABAJO =============== -->
+    <section id="metodo" class="py-16 bg-slate-900">
       <div class="mx-auto max-w-6xl px-6">
         <h2 class="text-3xl font-extrabold tracking-tight reveal">Cómo trabajo</h2>
-      <p class="mt-2 text-sm text-zinc-400 reveal">
+        <p class="mt-2 text-sm text-slate-400 reveal">
           Busco que cada proyecto tenga inicio y cierre claros, aunque después sigamos trabajando juntos.
         </p>
 
@@ -389,7 +353,7 @@
           <div class="card p-6 reveal">
             <div class="step">Paso 1</div>
             <h3 class="font-semibold mt-1">Contexto y objetivo</h3>
-            <p class="text-sm text-zinc-400 mt-2">
+            <p class="text-sm text-slate-400 mt-2">
               Relevamos dónde estás parado, qué te preocupa y qué querés lograr:
               bajar costos, reducir errores, empezar a exportar, etc.
             </p>
@@ -398,7 +362,7 @@
           <div class="card p-6 reveal">
             <div class="step">Paso 2</div>
             <h3 class="font-semibold mt-1">Diseño de la solución</h3>
-            <p class="text-sm text-zinc-400 mt-2">
+            <p class="text-sm text-slate-400 mt-2">
               Definimos el alcance: diagnóstico puntual, acompañamiento operativo, revisión de una operación, taller, etc.
             </p>
           </div>
@@ -406,7 +370,7 @@
           <div class="card p-6 reveal">
             <div class="step">Paso 3</div>
             <h3 class="font-semibold mt-1">Ejecución</h3>
-            <p class="text-sm text-zinc-400 mt-2">
+            <p class="text-sm text-slate-400 mt-2">
               Trabajamos sobre casos reales. El foco está en que la operación salga bien,
               no sólo en producir documentos.
             </p>
@@ -415,7 +379,7 @@
           <div class="card p-6 reveal">
             <div class="step">Paso 4</div>
             <h3 class="font-semibold mt-1">Cierre y próximos pasos</h3>
-            <p class="text-sm text-zinc-400 mt-2">
+            <p class="text-sm text-slate-400 mt-2">
               Dejamos por escrito lo aprendido, los cambios implementados y qué conviene seguir monitoreando.
             </p>
           </div>
@@ -427,14 +391,14 @@
     <section id="casos" class="py-16">
       <div class="mx-auto max-w-6xl px-6">
         <h2 class="text-3xl font-extrabold tracking-tight reveal">Casos y tipos de proyectos</h2>
-        <p class="mt-2 text-sm text-zinc-400 reveal">
+        <p class="mt-2 text-sm text-slate-400 reveal">
           Ejemplos del tipo de trabajo realizado con empresas y organizaciones.
         </p>
 
         <div class="grid md:grid-cols-3 gap-6 mt-8">
           <article class="card p-6 reveal">
             <h3 class="font-semibold text-sm">Consumo masivo y exportación</h3>
-            <p class="text-sm text-zinc-400 mt-2">
+            <p class="text-sm text-slate-400 mt-2">
               Acompañamiento en la operativa de exportación para empresas de alimentos y consumo masivo,
               con foco en ordenar procesos, documentación y coordinación logística.
             </p>
@@ -442,7 +406,7 @@
 
           <article class="card p-6 reveal">
             <h3 class="font-semibold text-sm">Arquitectura e ingeniería</h3>
-            <p class="text-sm text-zinc-400 mt-2">
+            <p class="text-sm text-slate-400 mt-2">
               Soporte a estudios y empresas de proyectos como Tatú Arquitectura, CDS Ingenieros y Equimas,
               ayudando a estructurar mejor los procesos de compras y servicios.
             </p>
@@ -450,7 +414,7 @@
 
           <article class="card p-6 reveal">
             <h3 class="font-semibold text-sm">Programas y formación</h3>
-            <p class="text-sm text-zinc-400 mt-2">
+            <p class="text-sm text-slate-400 mt-2">
               Trabajo con organizaciones como Empretec, en espacios orientados al desarrollo de negocios
               y profesionalización de procesos vinculados al comercio internacional.
             </p>
@@ -460,7 +424,7 @@
     </section>
 
     <!-- =============== COMENTARIOS =============== -->
-    <section id="comentarios" class="py-16 bg-zinc-50/60">
+    <section id="comentarios" class="py-16 bg-slate-900">
       <div class="mx-auto max-w-6xl px-6">
         <h2 class="text-3xl font-extrabold tracking-tight reveal">Comentarios y referencias</h2>
 
@@ -516,14 +480,14 @@
     <section id="tips" class="py-16">
       <div class="mx-auto max-w-6xl px-6">
         <h2 class="text-3xl font-extrabold tracking-tight reveal">Tips de importación y exportación</h2>
-        <p class="mt-2 text-sm text-zinc-400 reveal">
+        <p class="mt-2 text-sm text-slate-400 reveal">
           Puntos de control que conviene revisar en cualquier operación antes de decir “está todo ok”.
         </p>
 
         <div class="grid md:grid-cols-3 gap-6 mt-8">
           <article class="card p-6 reveal">
             <h3 class="font-semibold text-sm">1. Antes de enviar una cotización</h3>
-            <ul class="check mt-2 space-y-1 text-sm text-zinc-400">
+            <ul class="check mt-2 space-y-1 text-sm text-slate-400">
               <li>Definir Incoterm, puerto de carga y puerto de destino desde el inicio.</li>
               <li>Separar producto, flete y costos adicionales (seguros, depósitos, tasas).</li>
               <li>Dejar por escrito quién asume los costos en destino.</li>
@@ -532,7 +496,7 @@
 
           <article class="card p-6 reveal">
             <h3 class="font-semibold text-sm">2. Documentación mínima “sin sorpresas”</h3>
-            <ul class="check mt-2 space-y-1 text-sm text-zinc-400">
+            <ul class="check mt-2 space-y-1 text-sm text-slate-400">
               <li>Proforma alineada con la orden real (PO).</li>
               <li>NCM/HS y requisitos sanitarios revisados antes del booking.</li>
               <li>Factura, packing list, BL/CRT y certificados revisados dos veces.</li>
@@ -541,7 +505,7 @@
 
           <article class="card p-6 reveal">
             <h3 class="font-semibold text-sm">3. Gestión del riesgo operativo</h3>
-            <ul class="check mt-2 space-y-1 text-sm text-zinc-400">
+            <ul class="check mt-2 space-y-1 text-sm text-slate-400">
               <li>No depender de un único proveedor o naviera en operaciones críticas.</li>
               <li>Documentar por escrito cambios de fechas, cantidades o puertos.</li>
               <li>Confirmar tiempos reales de tránsito y posibles demoras.</li>
@@ -552,7 +516,7 @@
     </section>
 
     <!-- =============== FORMACIÓN =============== -->
-    <section id="formacion" class="py-16 bg-zinc-50/60">
+    <section id="formacion" class="py-16 bg-slate-900">
       <div class="mx-auto max-w-6xl px-6">
         <h2 class="text-3xl font-extrabold tracking-tight reveal">Formación</h2>
         <div id="edu-wrapper" class="grid md:grid-cols-3 gap-6 mt-8"></div>
@@ -564,25 +528,35 @@
       <div class="mx-auto max-w-6xl px-6 grid md:grid-cols-2 gap-6">
         <div class="card p-6 reveal text-sm">
           <h2 class="text-xl font-semibold">Consultas y comentarios</h2>
-          <p class="mt-2 text-zinc-400">
+          <p class="mt-2 text-slate-400">
             Espacio para compartir dudas concretas sobre operaciones de importación/exportación, ideas de proyectos
             o comentarios sobre la información del sitio.
           </p>
-          <ul class="mt-4 space-y-1 text-zinc-400">
+          <ul class="mt-4 space-y-1 text-slate-400">
             <li>• Incoterms y reparto de costos.</li>
             <li>• Documentación específica (BL, CRT, certificados, registros, etc.).</li>
             <li>• Comentarios o sugerencias sobre los tips publicados.</li>
           </ul>
-          <p class="mt-4 text-xs text-zinc-500">
+          <p class="mt-4 text-xs text-slate-500">
+            Si preferís, podés escribirme directo a <span class="font-semibold">nicolasbarrioscriz@gmail.com</span>
+            o por WhatsApp al <span class="font-semibold">+598 92 168 350</span>.
+          </p>
+          <p class="mt-3 text-xs text-slate-500">
             La información se envía por correo electrónico sólo para responder a tu consulta.
             No se utiliza para listas masivas ni se comparte con terceros.
           </p>
         </div>
+
         <div class="card p-6 reveal">
-          <form data-type="consulta" action="#" method="post" enctype="text/plain" class="grid gap-3 text-sm">
-            <input required name="Nombre" placeholder="Nombre / Empresa" class="input" />
-            <input required name="Email" type="email" placeholder="Email" class="input" />
-            <select name="Tema" class="input">
+          <form
+            data-type="consulta"
+            action="https://formspree.io/f/mvgybbzn"
+            method="POST"
+            class="grid gap-3 text-sm"
+          >
+            <input required name="nombre" placeholder="Nombre / Empresa" class="input" />
+            <input required name="email" type="email" placeholder="Email" class="input" />
+            <select name="tema" class="input">
               <option value="">Tema de la consulta (opcional)</option>
               <option value="exportacion">Exportación</option>
               <option value="importacion">Importación</option>
@@ -590,15 +564,18 @@
               <option value="documentacion">Documentación / registros</option>
               <option value="otro">Otro</option>
             </select>
-            <textarea required name="Mensaje" rows="5" placeholder="Tu consulta o comentario" class="input"></textarea>
-            <button class="cta-dark">Enviar consulta</button>
+            <textarea required name="mensaje" rows="5" placeholder="Tu consulta o comentario" class="input"></textarea>
+
+            <input type="hidden" name="_subject" value="Consulta desde la web" />
+
+            <button class="cta-dark" type="submit">Enviar consulta</button>
           </form>
         </div>
       </div>
     </section>
 
     <!-- =============== CONTACTO =============== -->
-    <section id="contacto" class="py-16 bg-zinc-50/60">
+    <section id="contacto" class="py-16 bg-slate-900">
       <div class="mx-auto max-w-6xl px-6 grid md:grid-cols-3 gap-6">
         <div class="card p-6 reveal text-sm">
           <h3 class="font-semibold mb-2">Contacto directo</h3>
@@ -608,16 +585,32 @@
           <a href="https://wa.me/59892168350?text=Hola%20Nicol%C3%A1s%2C%20quiero%20consultarte%20por%20un%20proyecto%20de%20comercio%20exterior." class="block">💬 WhatsApp</a>
           <div class="block mt-2">📍 Montevideo, Uruguay</div>
         </div>
+
         <div class="card p-6 md:col-span-2 reveal">
           <h3 class="font-semibold mb-2 text-sm">Contame brevemente qué necesitás</h3>
-          <p class="text-xs text-zinc-500 mb-3">
+          <p class="text-xs text-slate-500 mb-3">
             La información de este formulario se envía por correo únicamente para responderte sobre este proyecto.
           </p>
-          <form data-type="proyecto" action="#" method="post" enctype="text/plain" class="grid gap-3">
-            <input required name="Nombre" placeholder="Nombre / Empresa" class="input" />
-            <input required name="Email" type="email" placeholder="Email" class="input" />
-            <textarea required name="Contexto" rows="5" placeholder="Breve contexto, tipo de producto/servicio, país/es involucrados, qué te preocupa o qué querés mejorar." class="input"></textarea>
-            <button class="cta-dark">Enviar mensaje</button>
+
+          <form
+            data-type="proyecto"
+            action="https://formspree.io/f/mvgybbzn"
+            method="POST"
+            class="grid gap-3"
+          >
+            <input required name="nombre" placeholder="Nombre / Empresa" class="input" />
+            <input required name="email" type="email" placeholder="Email" class="input" />
+            <textarea
+              required
+              name="contexto"
+              rows="5"
+              placeholder="Breve contexto, tipo de producto/servicio, país/es involucrados, qué te preocupa o qué querés mejorar."
+              class="input"
+            ></textarea>
+
+            <input type="hidden" name="_subject" value="Proyecto de comercio exterior" />
+
+            <button class="cta-dark" type="submit">Enviar mensaje</button>
           </form>
         </div>
       </div>
@@ -625,8 +618,8 @@
 
   </main>
 
-  <footer class="py-10">
-    <div class="mx-auto max-w-6xl px-6 text-sm text-zinc-600 text-center">
+  <footer class="py-10 bg-slate-950 border-t border-slate-800">
+    <div class="mx-auto max-w-6xl px-6 text-sm text-slate-500 text-center">
       © 2025 Lic. Nicolás Barrios Criz — Todos los derechos reservados.
     </div>
   </footer>

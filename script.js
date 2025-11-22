@@ -7,7 +7,7 @@ const PROFILE = {
   certifications: []
 };
 
-// ===== Animación Reveal, formación dinámica, email ofuscado y formularios =====
+// ===== Animación Reveal, formación dinámica y email ofuscado =====
 (function () {
   // ------ Reveal con IntersectionObserver ------
   const els = document.querySelectorAll(".reveal");
@@ -86,7 +86,7 @@ const PROFILE = {
     }
   }
 
-  // ------ Ofuscación simple del email ------
+  // ------ Ofuscación simple del email (para mostrarlo, no para enviar) ------
   const user = "nicolasbarrioscriz";
   const domain = "gmail.com";
   const email = `${user}@${domain}`;
@@ -102,31 +102,4 @@ const PROFILE = {
     cardEmail.textContent = `✉️ ${email}`;
     cardEmail.href = `mailto:${email}`;
   }
-
-  // ------ Helpers para formularios (mailto por JS) ------
-  function wireMailForm(form, subjectText) {
-    if (!form) return;
-
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      const data = new FormData(form);
-      const lines = [];
-      data.forEach((value, key) => {
-        lines.push(`${key}: ${value}`);
-      });
-
-      const subject = encodeURIComponent(subjectText);
-      const body = encodeURIComponent(lines.join("\n"));
-
-      // dispara el cliente de correo
-      window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
-    });
-  }
-
-  const consultaForm = document.querySelector('form[data-type="consulta"]');
-  wireMailForm(consultaForm, "Consulta desde la web");
-
-  const proyectoForm = document.querySelector('form[data-type="proyecto"]');
-  wireMailForm(proyectoForm, "Proyecto de comercio exterior");
 })();
