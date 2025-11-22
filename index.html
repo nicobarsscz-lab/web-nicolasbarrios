@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lic. Nicolás Barrios Criz — Comercio Internacional</title>
   <meta name="description" content="Acompañamiento práctico en comercio internacional para ordenar la operativa, bajar costos y reducir riesgos en exportación e importación.">
+
+  <!-- Seguridad básica -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; script-src 'self' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline'; connect-src 'self'; font-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self' mailto:; frame-ancestors 'none';">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -70,7 +75,7 @@
 
           <div class="mt-6 flex flex-wrap gap-6 text-sm text-zinc-400">
             <span>📍 Montevideo, Uruguay</span>
-            <span>✉️ <a class="underline underline-offset-4" href="mailto:nicolasbarrioscriz@gmail.com">nicolasbarrioscriz@gmail.com</a></span>
+            <span>✉️ <a id="hero-email" class="underline underline-offset-4" href="#"></a></span>
             <span>🌐 ES · EN · PT</span>
           </div>
 
@@ -376,7 +381,7 @@
     <section id="metodo" class="py-16 bg-zinc-50/60">
       <div class="mx-auto max-w-6xl px-6">
         <h2 class="text-3xl font-extrabold tracking-tight reveal">Cómo trabajo</h2>
-        <p class="mt-2 text-sm text-zinc-400 reveal">
+      <p class="mt-2 text-sm text-zinc-400 reveal">
           Busco que cada proyecto tenga inicio y cierre claros, aunque después sigamos trabajando juntos.
         </p>
 
@@ -569,12 +574,12 @@
             <li>• Comentarios o sugerencias sobre los tips publicados.</li>
           </ul>
           <p class="mt-4 text-xs text-zinc-500">
-            La información no se publica. Si el tema requiere una consultoría más profunda,
-            podemos seguir la conversación por email o videollamada.
+            La información se envía por correo electrónico sólo para responder a tu consulta.
+            No se utiliza para listas masivas ni se comparte con terceros.
           </p>
         </div>
         <div class="card p-6 reveal">
-          <form action="mailto:nicolasbarrioscriz@gmail.com?subject=Consulta%20desde%20la%20web" method="post" enctype="text/plain" class="grid gap-3 text-sm">
+          <form data-type="consulta" action="#" method="post" enctype="text/plain" class="grid gap-3 text-sm">
             <input required name="Nombre" placeholder="Nombre / Empresa" class="input" />
             <input required name="Email" type="email" placeholder="Email" class="input" />
             <select name="Tema" class="input">
@@ -597,7 +602,7 @@
       <div class="mx-auto max-w-6xl px-6 grid md:grid-cols-3 gap-6">
         <div class="card p-6 reveal text-sm">
           <h3 class="font-semibold mb-2">Contacto directo</h3>
-          <a href="mailto:nicolasbarrioscriz@gmail.com" class="block">✉️ nicolasbarrioscriz@gmail.com</a>
+          <a id="card-email" class="block" href="#"></a>
           <a href="tel:+59892168350" class="block">📞 +598 92 168 350</a>
           <a href="https://www.linkedin.com/in/nicol%C3%A1s-barrios-criz-480a36163/" class="block">in LinkedIn</a>
           <a href="https://wa.me/59892168350?text=Hola%20Nicol%C3%A1s%2C%20quiero%20consultarte%20por%20un%20proyecto%20de%20comercio%20exterior." class="block">💬 WhatsApp</a>
@@ -606,9 +611,9 @@
         <div class="card p-6 md:col-span-2 reveal">
           <h3 class="font-semibold mb-2 text-sm">Contame brevemente qué necesitás</h3>
           <p class="text-xs text-zinc-500 mb-3">
-            Con esta información puedo decirte rápidamente si te puedo ayudar y qué tipo de esquema tendría más sentido.
+            La información de este formulario se envía por correo únicamente para responderte sobre este proyecto.
           </p>
-          <form action="mailto:nicolasbarrioscriz@gmail.com?subject=Proyecto%20de%20comercio%20exterior" method="post" enctype="text/plain" class="grid gap-3">
+          <form data-type="proyecto" action="#" method="post" enctype="text/plain" class="grid gap-3">
             <input required name="Nombre" placeholder="Nombre / Empresa" class="input" />
             <input required name="Email" type="email" placeholder="Email" class="input" />
             <textarea required name="Contexto" rows="5" placeholder="Breve contexto, tipo de producto/servicio, país/es involucrados, qué te preocupa o qué querés mejorar." class="input"></textarea>
