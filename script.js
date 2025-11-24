@@ -1,4 +1,4 @@
-// ===== PERFIL DINÁMICO (cargá tus datos) =====
+// ===== PERFIL DINÁMICO =====
 const PROFILE = {
   degree: "Licenciado en Negocios Internacionales e Integración Económica",
   university: "Universidad Católica del Uruguay",
@@ -7,9 +7,9 @@ const PROFILE = {
   certifications: []
 };
 
-// ===== Animación Reveal, formación dinámica y email ofuscado =====
+// ===== Reveal + Formación + Email =====
 (function () {
-  // ------ Reveal con IntersectionObserver ------
+  // Reveal
   const els = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window) {
     const io = new IntersectionObserver(
@@ -25,11 +25,10 @@ const PROFILE = {
     );
     els.forEach((el) => io.observe(el));
   } else {
-    // fallback: mostrar todo si no hay soporte
     els.forEach((el) => el.classList.add("in"));
   }
 
-  // ------ Formación dinámica ------
+  // Formación dinámica
   const wrapper = document.getElementById("edu-wrapper");
   if (wrapper) {
     const blocks = [];
@@ -86,7 +85,7 @@ const PROFILE = {
     }
   }
 
-  // ------ Ofuscación simple del email (para mostrarlo, no para enviar) ------
+  // Email ofuscado simple
   const user = "nicolasbarrioscriz";
   const domain = "gmail.com";
   const email = `${user}@${domain}`;
