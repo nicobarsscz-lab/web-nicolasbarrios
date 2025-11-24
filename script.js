@@ -67,13 +67,13 @@ const PROFILE = {
 
         if (b.body) {
           const p = document.createElement("p");
-          p.className = "text-sm text-zinc-600 mt-2";
+          p.className = "text-sm text-slate-300 mt-2";
           p.textContent = b.body;
           card.appendChild(p);
         }
         if (b.list) {
           const ul = document.createElement("ul");
-          ul.className = "mt-2 space-y-1 text-sm text-zinc-600 list-disc pl-5";
+          ul.className = "mt-2 space-y-1 text-sm text-slate-300 list-disc pl-5";
           b.list.forEach((item) => {
             const li = document.createElement("li");
             li.textContent = item;
